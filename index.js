@@ -1,3 +1,5 @@
+#!/bin/bash
+
 const puppeteer = require('puppeteer')
 const ora = require('ora')
 const creds = require('./creds.json')
