@@ -1,0 +1,9 @@
+{
+  "login_link": "a.connect_link",
+  "id_input": "#UserName",
+  "password_input": "#Password",
+  "login_btn": "#btnLogin",
+  "credit_txt": "#muliComptesTable > tbody:nth-child(1) > tr > td.align_right.padright35 > span.size16.uppercase_txt.hard_grey_txt.bold.evolutionCompteSolde",
+  "credit_realtime_txt": "#muliComptesTable > tbody:nth-child(1) > tr > td.align_right.padright35 > span.plus_infos > span > span.bold.uppercase_txt",
+  "error_txt": "#LoginForm > div.mb_40 > p.error_red_message.no_left_padding"
+}
