@@ -2,11 +2,11 @@
 
 const puppeteer = require('puppeteer')
 const ora = require('ora')
+console.log(process.argv)
 const creds = require('./creds.json')
 const selectors = require('./selectors.json');
 
 (async () => {
-  console.log(process.argv)
   const spinner = new ora()
   let browser
   try {
