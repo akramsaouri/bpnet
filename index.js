@@ -2,8 +2,7 @@
 
 const puppeteer = require('puppeteer')
 const ora = require('ora')
-console.log(process.argv)
-const creds = require('./creds.json')
+const creds = require(process.argv[2])
 const selectors = require('./selectors.json');
 
 (async () => {
