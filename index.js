@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env node
 
 const puppeteer = require('puppeteer')
 const ora = require('ora')
@@ -6,6 +6,7 @@ const creds = require('./creds.json')
 const selectors = require('./selectors.json');
 
 (async () => {
+  console.log(process.argv)
   const spinner = new ora()
   let browser
   try {
