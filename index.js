@@ -1,20 +1,19 @@
-#!/usr/bin/env node
+#!/usr/bin/env NODE_ENV=production node
 
 const puppeteer = require('puppeteer')
 const ora = require('ora')
-console.log(__dirname)
-console.log(require('path').resolve(process.argv[2]))
-console.log(require('path').resolve(process.argv[2]))
 const creds = require(require('path').resolve(process.argv[2]))
-const selectors = require('./selectors.json');
-
+const selectors = require('./selectors.json')
+  ;
 (async () => {
   const spinner = new ora()
   let browser
   try {
     spinner.start('Launching browser...')
-    browser = await puppeteer.launch({ headless: process.env.NODE_ENV === 'production' });
-    const page = await browser.newPage();
+    browser = await puppeteer.launch({
+      headless: process.env.NODE_ENV === 'production'
+    })
+    const page = await browser.newPage()
     await page.setViewport({
       width: 1280,
       height: 768,
@@ -23,7 +22,7 @@ const selectors = require('./selectors.json');
 
     // open login page
     spinner.start('Opening login page...')
-    await page.goto('https://bpnet.gbp.ma/');
+    await page.goto('https://bpnet.gbp.ma/')
     await page.click(selectors.login_link)
     await page.waitFor(3000)
     spinner.succeed()
@@ -59,6 +58,6 @@ const selectors = require('./selectors.json');
       console.log(e)
     }
   } finally {
-    await browser.close();
+    await browser.close()
   }
 })()
