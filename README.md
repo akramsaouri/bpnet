@@ -1,4 +1,4 @@
-# foo
+# bpnet
 Using puppeteer to fetch my balance from my (shitty) bank account.
 
 ## How to use 
